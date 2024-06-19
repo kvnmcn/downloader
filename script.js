@@ -20,6 +20,7 @@ extractButton.addEventListener("click", function () {
     outputText.appendChild(download);
   } else {
     outputText.innerHTML = "No URL found.";
+    
   }
 });
 
@@ -28,4 +29,3 @@ clearButton.addEventListener("click", function () {
   outputText.innerHTML = "";
 });
 
-function extract(text) {}
