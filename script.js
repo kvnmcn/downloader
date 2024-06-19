@@ -5,11 +5,11 @@ const clearButton = document.getElementById("clearButton");
 
 extractButton.addEventListener("click", function () {
   const text = inputText.value;
-  const valueRegex = /\"browser_native_hd_url\":\"([^\"]+)\"/m;
+  const valueRegex = /\"browser_native_hd_url\":\"([^\"]+)\"/;
   const extractedUrl = text.match(valueRegex);
 
   if (extractedUrl) {
-    const url = extractedUrl[1].replace(/%\u0025/g, "%").replace(/\\/g, "");
+    const url = extractedUrl[1].replace(/\\u0025/g, "%").replace(/\\/g, "");
     const download = document.createElement('button');
     outputText.innerHTML = ""; // Clear previous output
     download.classList.add('clickable');
