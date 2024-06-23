@@ -14,22 +14,51 @@
   align-items: center;
 }
 .buttons button {
-  margin: 3px 5px; 
+  margin: 3px 5px;
+  font-family: inherit;
+  border-radius: 2rem;
+  font-size: 14px;
+  border: 2px solid #ce796b;
+  line-height: 0px;
+  padding: 1em;
+  height: 3em;
+  width: 10em;
+  background-color: #f2daed;
+  transition: all 0.4s;
+  font-weight: 500;
 }
-
+.buttons > #extractButton:focus {
+  background-color: #ce796b;
+}
+.buttons button:hover {
+  background-color: #d68174;
+}
+.buttons button:active {
+  box-shadow: 2px 2px 5px #e78361;
+}
+#inputText {
+  background-color: #2c666e;
+  color: #ecc8af;
+  border: none;
+  border-radius: 9px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
 #outputText {
   font-weight: 500;
+  color: #61a8b9;
 }
 
 h1 {
   text-align: center;
   font-weight: 700;
   letter-spacing: -2px;
+  color: #3a8386;
 }
 textarea {
   resize: none;
 }
 html {
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  background-color: rgb(228, 230, 116);
+  background-color: #f0edee;
+  /* background-color: #0c101d; */
 }
