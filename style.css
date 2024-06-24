@@ -1,48 +1,100 @@
-.clickable {
-  cursor: pointer;
-}
-
 .center-div {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+[data-theme="dark"] {
+  --bg-color: #0c101d;
+}
+.switch {
+  height: 1rem;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+}
+.theme-switch {
+  display:inline-block;
+  position:relative;
+  height: 2rem;
+  width: 3.6rem;
+}
+.theme-switch input {
+  display:none;
+}
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  border-radius: 1rem;
+}
+
+.slider:before {
+  background-color: #eef2fc;
+  bottom: .3rem;
+  content: "";
+  height: 1.4rem;
+  left: 0.2rem;
+  position: absolute;
+  transition: .4s;
+  width: 1.5rem;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #171d31;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
 .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .buttons button {
+  cursor: pointer;
   margin: 3px 5px;
+  font-size: 0.9rem;
   font-family: inherit;
   border-radius: 2rem;
-  font-size: 14px;
   border: 2px solid #ce796b;
   line-height: 0px;
   padding: 1em;
   height: 3em;
-  width: 10em;
+  width: 9em;
   background-color: #f2daed;
   transition: all 0.4s;
   font-weight: 500;
 }
-.buttons > #extractButton:focus {
+
+.buttons>#extractButton:focus {
   background-color: #ce796b;
 }
+
 .buttons button:hover {
   background-color: #d68174;
 }
+
 .buttons button:active {
   box-shadow: 2px 2px 5px #e78361;
 }
+
 #inputText {
+  max-width: 50vw;
   background-color: #2c666e;
   color: #ecc8af;
   border: none;
-  border-radius: 9px;
+  border-radius: 0.8rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 #outputText {
   font-weight: 500;
   color: #61a8b9;
@@ -50,15 +102,18 @@
 
 h1 {
   text-align: center;
+  font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -2px;
+  margin: 1rem;
   color: #3a8386;
 }
+
 textarea {
   resize: none;
 }
+
 html {
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  background-color: #f0edee;
-  /* background-color: #0c101d; */
+  background-color: var(--bg-color);
 }
