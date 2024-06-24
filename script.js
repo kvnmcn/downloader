@@ -42,13 +42,17 @@ clearButton.addEventListener("click", function () {
   viewButton.innerHTML = "";
 });
 // credit to https://codepen.io/cortez/pen/jOrNGGQ
+// altered it a little bit
 const toggleSwitch = document.querySelector('.theme-switch');
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme) {
   document.documentElement.setAttribute('data-theme', currentTheme);
   if (currentTheme === 'dark') {
     toggleSwitch.checked = true;
-  } 
+    checkbox.checked = true;
+  } else {
+    toggleSwitch.checked = false;
+  }
 }
 function switchTheme(e) {
   if (e.target.checked) {
