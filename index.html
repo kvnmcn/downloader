@@ -15,6 +15,12 @@
   </head>
 
   <body>
+    <div class="switch">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox"/>
+        <div class="slider"></div>
+      </label>
+    </div>
     <div class="center-div">
       <h1>i want to download...</h1>
       <textarea
@@ -24,10 +30,10 @@
         cols="80"
       ></textarea>
       <div class="buttons">
-        <button id="extractButton" class="clickable" type="button">
+        <button id="extractButton" type="button">
           Extract
         </button>
-        <button id="clearButton" class="clickable" type="button">Clear</button>
+        <button id="clearButton" type="button">Clear</button>
       </div>
       <div class="buttons">
         <div id="outputText"></div>
