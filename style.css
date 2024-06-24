@@ -93,6 +93,9 @@ input:checked + .slider:before {
   border: none;
   border-radius: 0.8rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #outputText {
